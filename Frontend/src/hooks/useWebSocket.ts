@@ -45,7 +45,7 @@ export function useWebSocket({
     console.log(
       `WebSocket: Attempting to connect to room ${roomId} as ${username}...`
     );
-    ws.current = new WebSocket(WEBSOCKET_URL);
+    ws.current = new WebSocket("wss://canvas-flow-backend.onrender.com");
 
     ws.current.onopen = (event) => {
       console.log("WebSocket: Connection opened");
