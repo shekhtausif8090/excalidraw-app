@@ -2,6 +2,10 @@
 
 A modern, real-time collaborative drawing application that enables multiple users to work on shared canvases simultaneously. Perfect for brainstorming, teaching, or creative collaboration.
 
+## Demo
+
+[Watch the demo video](https://www.loom.com/share/62b1d9ba028c48b3a1e581d46b00a12c?sid=2da713c0-72f1-4069-95d0-e4bccebaa237) to see Canvas Flow in action.
+
 ## Features
 
 ### Core Functionality
