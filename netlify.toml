@@ -6,3 +6,7 @@
   NODE_VERSION = "18"
   VITE_WEBSOCKET_URL = "wss://canvas-flow-backend.onrender.com"
 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
