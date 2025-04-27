@@ -1,7 +1,7 @@
 // chat-app/client/src/hooks/useWebSocket.ts
 import { useState, useEffect, useRef, useCallback } from "react";
 
-const WEBSOCKET_URL = "wss://canvas-flow-backend.onrender.com" 
+//const WEBSOCKET_URL = "wss://canvas-flow-backend.onrender.com" 
 
 const RECONNECT_DELAY = 3000;
 const MAX_RECONNECT_ATTEMPTS = 5;
