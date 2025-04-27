@@ -1,7 +1,7 @@
 // chat-app/client/src/hooks/useWebSocket.ts
 import { useState, useEffect, useRef, useCallback } from "react";
 
-//const WEBSOCKET_URL = "wss://canvas-flow-backend.onrender.com" 
+const WEBSOCKET_URL = import.meta.env.VITE_WEBSOCKET_URL || "wss://canvas-flow-backend.onrender.com";
 
 const RECONNECT_DELAY = 3000;
 const MAX_RECONNECT_ATTEMPTS = 5;
@@ -45,7 +45,7 @@ export function useWebSocket({
     console.log(
       `WebSocket: Attempting to connect to room ${roomId} as ${username}...`
     );
-    ws.current = new WebSocket("wss://canvas-flow-backend.onrender.com");
+    ws.current = new WebSocket(WEBSOCKET_URL);
 
     ws.current.onopen = (event) => {
       console.log("WebSocket: Connection opened");

@@ -38,8 +38,9 @@ app.use(helmet());
 app.use(compression());
 app.use(express.json());
 app.use(cors({
-  origin: "https://excalidraw-app.netlify.app/",
-  methods: ["GET", "POST"]
+  origin: "https://excalidraw-app.netlify.app",
+  methods: ["GET", "POST"],
+  credentials: true
 }));
 
 const server = http.createServer(app);
