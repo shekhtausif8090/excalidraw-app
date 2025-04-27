@@ -1,9 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
 import { Shape } from "../types";
 
-const WS_URL = process.env.NODE_ENV === 'production' 
-  ? `${window.location.protocol.replace('http', 'ws')}//${window.location.host}` 
-  : `ws://localhost:8080`;
+// const WS_URL = process.env.NODE_ENV === 'production' 
+//   ? `${window.location.protocol.replace('http', 'ws')}//${window.location.host}` 
+//   : `ws://localhost:8080`;
+
+  const WEBSOCKET_URL = import.meta.env.VITE_WEBSOCKET_URL || "wss://canvas-flow-backend.onrender.com";
 
 interface UseWebSocketResult {
   isConnected: boolean;
@@ -30,7 +32,7 @@ export function useWebSocket(
     
     const connectWebSocket = () => {
       try {
-        const wsUrl = `${WS_URL}`;
+        const wsUrl = `${WEBSOCKET_URL}`;
         console.log(`Connecting to WebSocket at ${wsUrl}`);
         
         const ws = new WebSocket(wsUrl);
