@@ -37,7 +37,10 @@ const app = express();
 app.use(helmet());
 app.use(compression());
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://excalidraw-app.netlify.app/",
+  methods: ["GET", "POST"]
+}));
 
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server });
