@@ -43,7 +43,7 @@ app.use(cors({
 }));
 
 const server = http.createServer(app);
-const wss = new WebSocketServer({ server, port: 8080 });
+const wss = new WebSocket.Server({ server });
 
 app.get("/health", (req, res) => {
   res.json({ status: "ok", message: "Realtime Drawing Server is running." });
