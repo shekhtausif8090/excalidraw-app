@@ -1,0 +1,56 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="#000000" />
+  
+  <!-- Grid pattern -->
+  <g stroke="#333333" stroke-width="0.5">
+    <line x1="20" y1="0" x2="20" y2="100" />
+    <line x1="40" y1="0" x2="40" y2="100" />
+    <line x1="60" y1="0" x2="60" y2="100" />
+    <line x1="80" y1="0" x2="80" y2="100" />
+    
+    <line x1="0" y1="20" x2="100" y2="20" />
+    <line x1="0" y1="40" x2="100" y2="40" />
+    <line x1="0" y1="60" x2="100" y2="60" />
+    <line x1="0" y1="80" x2="100" y2="80" />
+  </g>
+  
+  <!-- Drawing shapes with glow effects -->
+  <g>
+    <!-- Blue Rectangle -->
+    <rect x="25" y="25" width="20" height="20" fill="none" stroke="#4ECDC4" stroke-width="3">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <rect x="25" y="25" width="20" height="20" fill="none" stroke="#4ECDC4" stroke-width="1" filter="url(#glow1)" />
+    
+    <!-- Red Rectangle -->
+    <rect x="55" y="30" width="30" height="15" fill="none" stroke="#FF6B6B" stroke-width="3">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite" />
+    </rect>
+    <rect x="55" y="30" width="30" height="15" fill="none" stroke="#FF6B6B" stroke-width="1" filter="url(#glow2)" />
+    
+    <!-- Yellow Rectangle -->
+    <rect x="35" y="55" width="40" height="25" fill="none" stroke="#FFE66D" stroke-width="3">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
+    </rect>
+    <rect x="35" y="55" width="40" height="25" fill="none" stroke="#FFE66D" stroke-width="1" filter="url(#glow3)" />
+  </g>
+  
+  <!-- Filters for glow effects -->
+  <defs>
+    <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+</svg> 

@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #6a5bcd;
+  --primary-dark: #5a4cbe;
+  --primary-darker: #4a3cae;
+  --primary-darkest: #3e32a3;
+  --primary-light: #7a6add;
+  --primary-lighter: #8a7aed;
+  --canvas-bg: #2d1b69;
+  --text-light: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+:root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  color: #333;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation for notifications */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}

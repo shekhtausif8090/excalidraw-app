@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/utils.ts","./src/controllers/shapescontroller.ts","./src/repositories/shapesrepository.ts","./src/routes/shapes.ts","./src/services/prisma.ts","./src/types/index.ts"],"version":"5.8.3"}
