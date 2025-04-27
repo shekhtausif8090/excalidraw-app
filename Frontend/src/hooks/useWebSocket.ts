@@ -1,6 +1,5 @@
 // chat-app/client/src/hooks/useWebSocket.ts
 import { useState, useEffect, useRef, useCallback } from "react";
-import { ChatMessage, WebSocketMessage } from "../types";
 
 const WEBSOCKET_URL = import.meta.env.WEBSOCKET_URL; // Your server URL
 const RECONNECT_DELAY = 3000;
