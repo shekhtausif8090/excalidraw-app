@@ -41,7 +41,8 @@ export function useWebSocket({
       console.log("WebSocket is already connected.");
       return;
     }
-
+    const WEBSOCKET_URL = import.meta.env.VITE_WEBSOCKET_URL || "wss://canvas-flow-backend.onrender.com";
+    console.log("Attempting to connect to WebSocket URL:", WEBSOCKET_URL);
     console.log(
       `WebSocket: Attempting to connect to room ${roomId} as ${username}...`
     );
